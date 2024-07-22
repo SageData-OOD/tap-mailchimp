@@ -301,15 +301,13 @@
             "type": [
               "null",
               "string"
-            ],
-            "format": "date-time"
+            ]
           },
           "last_unsub_date": {
             "type": [
               "null",
               "string"
-            ],
-            "format": "date-time"
+            ]
           }
         }
       }
