@@ -258,8 +258,7 @@
             "type": [
               "null",
               "string"
-            ],
-            "format": "date-time"
+            ]
           },
           "merge_field_count": {
             "type": [
