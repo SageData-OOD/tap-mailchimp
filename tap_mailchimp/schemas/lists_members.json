@@ -64,7 +64,7 @@
       "merge_fields": {
         "type": [
           "null",
-          "object"
+          "string"
         ]
       },
       "stats": {
