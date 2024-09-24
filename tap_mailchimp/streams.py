@@ -1,7 +1,7 @@
 """Stream type classes for tap-mailchimp."""
 
 from __future__ import annotations
-
+import json
 from pathlib import Path
 from dateutil.parser import isoparse
 
