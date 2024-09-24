@@ -105,6 +105,19 @@ class ListsMembersStream(MailchimpStream):
         params['since_last_changed'] = self.get_starting_timestamp(context)
         return params
 
+    def post_process(self, row, context=None)-> dict | None:
+        # Assuming `record['custom_data']` is a dictionary
+        if "merge_fields" in row:
+            # Serialize the custom_data field to a JSON string
+            row['merge_fields'] = json.dumps(row['merge_fields'])
+
+        timestamp_opt = row.get("timestamp_opt")
+
+        if isinstance(timestamp_opt, str) and timestamp_opt == "":
+            row["timestamp_opt"] = None
+
+        return row
+
 class ReportsUnsubscribes(MailchimpStream):
 
     name = 'reports_unsubscribes'
