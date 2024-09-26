@@ -116,6 +116,11 @@ class ListsMembersStream(MailchimpStream):
         if isinstance(timestamp_opt, str) and timestamp_opt == "":
             row["timestamp_opt"] = None
 
+        timestamp_signup = row.get("timestamp_signup")
+
+        if isinstance(timestamp_signup, str) and timestamp_signup == "":
+            row["timestamp_signup"] = None
+
         return row
 
 class ReportsUnsubscribes(MailchimpStream):
