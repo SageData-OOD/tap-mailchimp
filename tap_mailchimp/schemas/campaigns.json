@@ -429,13 +429,13 @@
               "total_spent": {
                 "type": [
                   "null",
-                  "integer"
+                  "number"
                 ]
               },
               "total_revenue": {
                 "type": [
                   "null",
-                  "integer"
+                  "number"
                 ]
               }
             }
